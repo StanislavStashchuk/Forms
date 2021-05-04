@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <!--Завдання по формам
+Отож ви робите сайт-клон rabota.ua
+Вам потрібно створити форму для реєстрації користувача і подачі резюме. В формі мають бути наступні сутності
+Логін
+Пароль
+Email
+Імя
+Прізвище
+Телефон
+Місто - вибрати з списку (достатньо 3 пунктів)
+Дата народження - має бути вибір через календар
+Знання англійської мови - від 1 до 10
+Далі окремим блоком має йти досвід роботи. Окремим тому що потім через джс ми зробимо додати ще 1 такий блок. Поля в блоці
+Компанія
+Посада
+Початок роботи - місяць рік
+Завершення роботи - місяць рік
+Відмітка - по сьогодні
+Окремо внизу (не блоком) має бути вибір видимості резюме - або всім або лише зареєстрованим
+Завантажити резюме
+Бажана зарплата (в долларах США)
+Кнопки надіслати та скинути введену в форму інформацію
+Додатково 
+1 забороняється використовувати CSS а також всі теги які не відносяться до форми. Виняток є лише тег br (break) щоб можна було нормально розділяти inline теги. 
+2. Типи полів мають відповідати інформації яка в них вводиться.
+3. Завдання залити в github і github pages. Оба посилання додати в LMS і кинути мені в приват в слак-->
+
+<form action="registration">
+    <fieldset>
+        <label for="login">Логін:</label><br>
+        <input type="text" id="login" name="login" value="Логін"><br>
+        <label for="password">Пароль:</label><br>
+        <input type="text" id="password" name="password" value="Пароль"><br>
+        <label for="email">Електронна пошта:</label><br>
+        <input type="text" id="email" name="email" value="Електронна пошта"><br>
+        <label for="fname">Ім'я:</label><br>
+        <input type="text" id="fname" name="fname" value="Кирило"><br>
+        <label for="lname">Прізвище:</label><br>
+        <input type="text" id="lname" name="lname" value="Кожумяка"><br>
+        <label for="phone">Номер телефону:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="111-11-11-11" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required><br>
+        <label for="city">Місто:</label><br>
+            <select id="city" name="citylist" form="cityform">
+                <option value="volvo">Дніпро</option>
+                <option value="saab">Херсон</option>
+                <option value="opel">Кам'янець-Подільський</option>
+                <option value="audi">Луцьк</option>
+            </select><br>
+        <label for="birthday">Дата народження:</label><br>
+        <input type="date" id="datemin" name="datemin" min="1925-01-02"><br>
+        <label for="quantity">Знання англійської від 1 до 10):</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+    </fieldset>
+    <fieldset></fieldset>
+</form>
+    
+</body>
+</html>
