@@ -7,32 +7,7 @@
     <title>Forms</title>
 </head>
 <body>
-    <!--Завдання по формам
-Отож ви робите сайт-клон rabota.ua
-Вам потрібно створити форму для реєстрації користувача і подачі резюме. В формі мають бути наступні сутності
-Логін
-Пароль
-Email
-Імя
-Прізвище
-Телефон
-Місто - вибрати з списку (достатньо 3 пунктів)
-Дата народження - має бути вибір через календар
-Знання англійської мови - від 1 до 10
-Далі окремим блоком має йти досвід роботи. Окремим тому що потім через джс ми зробимо додати ще 1 такий блок. Поля в блоці
-Компанія
-Посада
-Початок роботи - місяць рік
-Завершення роботи - місяць рік
-Відмітка - по сьогодні
-Окремо внизу (не блоком) має бути вибір видимості резюме - або всім або лише зареєстрованим
-Завантажити резюме
-Бажана зарплата (в долларах США)
-Кнопки надіслати та скинути введену в форму інформацію
-Додатково 
-1 забороняється використовувати CSS а також всі теги які не відносяться до форми. Виняток є лише тег br (break) щоб можна було нормально розділяти inline теги. 
-2. Типи полів мають відповідати інформації яка в них вводиться.
-3. Завдання залити в github і github pages. Оба посилання додати в LMS і кинути мені в приват в слак-->
+    <!--Завдання по формам-->
 
 <form action="registration">
     <fieldset>
@@ -86,7 +61,7 @@ Email
         <input type="number" id="year" name="year" min="1945" max="2021"><br>
         <p>ЗАкінчення роботи - </p>
         <label for="month">Місяць:</label>
-            <select id="month" name="monthlist" form="monthform">
+            <select id="workmonth" name="monthlist" form="monthform">
                 <option value="january">Січень</option>
                 <option value="february">Лютий</option>
                 <option value="march">Березень</option>
@@ -101,8 +76,23 @@ Email
                 <option value="december">Грудень</option>
             </select><br>
         <label for="year">Рік:</label>
-        <input type="number" id="year" name="year" min="1945" max="2021"><br>
+        <input type="number" id="workyear" name="year" min="1945" max="2021"><br>
     </fieldset>
+        <br>
+        <input type="radio" id="cvPublic" name="public" value="public">
+        <label for="cvPublic">Показувати усім користувачам</label><br>
+        <input type="radio" id="cvPrivate" name="private" value="private">
+        <label for="cvPrivate">Показувати лише зареєстрованим користувачам</label><br>
+
+        <form action="/action_page.php">
+            <label for="myCV">Завантажити резюме:</label>
+            <input type="file" id="myCV" name="myCV"><br>
+            <label for="salary">Бажаний дохів (в дол.США) </label>
+            <input type="text" id="salary" name="salary" value="4000 $"><br>
+            <br>
+            <input type="submit" value="Відправити">
+        </form>
+
 </form>
     
 </body>
